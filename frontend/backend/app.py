@@ -1,12 +1,11 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from articles import articles
+from articles import articles #aca conectos los articulos con mi archivo app.py
+from users import users
+from fechasRecital import fechasRecital
 
 app = Flask(__name__)
 CORS(app)
-
-
-
 
 # Testing Route
 @app.route('/ping', methods=['GET'])
@@ -18,6 +17,7 @@ def ping():
 def getArticles():
     # return jsonify(products)
     return jsonify({'articles': articles})
+    # me devuelve los articulos 
 
 
 @app.route('/products/<string:product_name>')
@@ -64,6 +64,25 @@ def deleteProduct(article_name):
             'message': 'Article Deleted',
             'article': articles
         })
+
+#agrego ruta Login
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.get_json();
+
+    username = data["name"],
+    password = data ["password"],
+
+    user = next((user for user in users if user["name"]== username and user["password"]== password), None)
+    if user:
+        return jsonify({"status": "success", "user": user}), 200
+    else:
+        return jsonify({"status": "error"}), 401
+
+# Get Data Routes
+@app.route('/available-days')
+def getAvailableDays():
+    return jsonify(fechasRecital)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
