@@ -62,6 +62,8 @@
   width:100vw;
   height: 50vh;
   background-image: url("../assets/Festival-1500x430-1.png");
+  background-repeat: no-repeat;
+  background-size: cover ;
 }
 
   .hero-div h1{
