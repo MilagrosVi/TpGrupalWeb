@@ -9,7 +9,7 @@
 
   <section class="hero">
     <div class="hero-div">
-      <img src="../assets/Festival-1500x430-1.png" alt="hero" class="hero-img">
+      <h1>ROCK FEST</h1>
     </div> 
   </section>
   
@@ -58,9 +58,17 @@
 <style>
 
 .hero-div{
+  overflow-x: hidden;
+  width:100vw;
+  height: 50vh;
   background-image: url("../assets/Festival-1500x430-1.png");
-  background-repeat: no-repeat;
 }
 
+  .hero-div h1{
+    display: flex;
+    font-size: 3em;
+    justify-content:center;
+    color: deeppink;
+  }
 
 </style>
