@@ -53,7 +53,7 @@ export default {
     flex-direction: row;
     align-items: center;
     flex: 50vw;
-
+    text-decoration:none;
 }
 
 .ul-nav {
