@@ -6,7 +6,7 @@
 
     <div class="left-nav">
         <ul class="ul-nav">
-            <a href="#"> NOMBRE DEL FESTIVAL </a>
+            <a href="#"> ROCK FEST</a>
         </ul>
     </div>
 
