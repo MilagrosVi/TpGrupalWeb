@@ -1,19 +1,14 @@
 <template>
-  <!-- <div class="container mt-5">
-    <div v-for="article in articles" v-bind:key="article.id">
-        <h3>{{article.title}}</h3>
-        <p>{{article.body}}</p>
-        <p>{{article.fecha}}</p>
-    </div>
-  </div> -->
 
   <section class="hero">
     <div class="hero-div">
       <h1>ROCK FEST</h1>
-    </div> 
+      <h2 class="fechas"> 10 y 11  de Noviembre </h2>
+      <p class="lugar"> Hipodromo de San Isidro </p>
+   </div> 
   </section>
-  
-  <h1>Festival</h1>
+ 
+
 
 
 </template>
@@ -72,5 +67,21 @@
     justify-content:center;
     color: rgb(154,219,228);
   }
+
+  .fechas{display: flex;
+  font-size: 2em;
+  justify-content:center;
+    color: rgb(154,219,228);
+
+  }
+
+  .lugar{
+  display: flex;
+  font-size: 1.5em;
+  justify-content:center;
+    color: rgb(154,219,228);
+
+  }
+  
 
 </style>

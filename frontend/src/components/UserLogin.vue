@@ -1,14 +1,15 @@
 <template>
-    <div class="container  mt-4">
+    <div class="container">
         <div id="logInApp" class="col-sm-8 col-sm-offset-2">
-            <h1>{{nameApp}}</h1>
+            <h1 class="log">{{nameApp}}</h1>
             
             <form v-on:submit="comprobarUsuario">
                 <input type="text" v-model="usuarioIngresado.nombreUsuario" class="form-control" placeholder="nombre de usuario">
                 <input type="password" v-model="usuarioIngresado.contrasenia" class="form-control" placeholder="contraseña">
                 <input type="submit" value="Ingresar" class="btn btn-block btn-success">
+                <router-link to="/otra-pagina">Registrate </router-link>
             </form>
-            <br>
+            
             
         </div>
     </div>
@@ -18,7 +19,7 @@
 export default {
     data() {
                 return {
-                    nameApp: 'LogIn',
+                    nameApp: 'LOG IN ',
 
                     usuarioIngresado: {
                         nombreUsuario:'',
@@ -86,9 +87,18 @@ export default {
 </script>
 
 <style>
+.log{
+    color:black;
+    font-size: 2.3rem;
+    text-align: center;
+    line-height:2;
+    font-family: 'Manrope', sans-serif;
+}
 .container{
     display:flex;
     justify-content:center;
+    align-items:center;
+    height:80vh;
 }
 
 .container div form {
