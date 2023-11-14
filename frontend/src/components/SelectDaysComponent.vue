@@ -8,6 +8,7 @@
                     <div v-for="day in days" class="card"  v-bind:key="day.idDia">
                         <div>
                             <input type="checkbox" v-bind:value="day.numeroDia" v-model="selectedDays">
+                            <label> {{day.Recital}} Dia {{day.numeroDia}}</label>
                         </div>
                         <div class="card-data">
                             <h2> {{day.Recital}} Dia {{day.numeroDia}}</h2>
