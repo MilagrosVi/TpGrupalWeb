@@ -70,7 +70,7 @@
     display: flex;
     font-size: 3em;
     justify-content:center;
-    color: deeppink;
+    color: rgb(154,219,228);
   }
 
 </style>
