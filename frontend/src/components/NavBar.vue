@@ -6,7 +6,7 @@
 
     <div class="left-nav">
         <ul class="ul-nav">
-            <a href="#"> ROCK FEST</a>
+            <a href="/HomePage.vue"> ROCK FEST</a>
         </ul>
     </div>
 
