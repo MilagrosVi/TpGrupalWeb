@@ -13,7 +13,7 @@
     <div class="right-nav"> 
         <ul class="ul-nav">
             <li class="nav-item1">
-            <router-link class="" aria-current="page" to="/UserLogin.vue">Log In</router-link>
+            <router-link class="" aria-current="page" to="/users">Log In</router-link>
             </li>
             <li class="nav-item2">
             <router-link class="" to="/select-days">Comprar Tickets</router-link>
