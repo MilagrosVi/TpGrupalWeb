@@ -6,17 +6,17 @@
 
     <div class="left-nav">
         <ul class="ul-nav">
-            <a href="/HomePage.vue"> ROCK FEST</a>
+            <a href="#"> ROCK FEST</a>
         </ul>
     </div>
 
     <div class="right-nav"> 
         <ul class="ul-nav">
-            <li class="nav-item1">
-            <router-link class="" aria-current="page" to="/login">Log In</router-link>
+            <li class="nav-item">
+                <router-link to="">Log In</router-link>
             </li>
-            <li class="nav-item2">
-            <router-link class="" to="/select-days">Comprar Tickets</router-link>
+            <li class="nav-item">
+                <router-link to="/select-days">Comprar Tickets</router-link>
             </li>
         </ul>   
     </div>
@@ -31,57 +31,45 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
-.main-header{
+.main-header {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 1%;
+    background-color: rgb(154, 219, 228); /* Fondo de la barra */
 }
 
-.left-nav{
+.left-nav, .right-nav {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items:center;
-    flex: 50vw;
-}
-
-.right-nav{
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    flex: 50vw;
-    text-decoration:none;
 }
 
 .ul-nav {
     display: flex;
-    flex-direction: row;
     list-style: none;
-    width: 33vw;
-    justify-content: space-evenly;
     font-family: 'Manrope', sans-serif;
     font-weight: 600;
     font-size: small;
 }
 
-a{
+.ul-nav a {
     text-decoration: none;
-    color: black;
+    color: white; /* Color del texto en la barra */
 }
 
-.nav-item1{
-    padding: 2%;
-    background-color: #f2defa;
-    border-radius: 7%;
+.nav-item {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 5px; /* Separación entre elementos */
+    transition: background-color 0.3s ease; /* Efecto de transición en el color de fondo */
 }
 
-.nav-item2{
-    padding: 2%;
-    background-color: greenyellow;
-    border-radius: 7%;
+.nav-item:hover {
+    background-color: rgb(218, 205, 205); /* Color de fondo al pasar el ratón */
 }
 
 </style>
+
+
