@@ -6,14 +6,14 @@
 
     <div class="left-nav">
         <ul class="ul-nav">
-            <a href="#"> ROCK FEST</a>
+            <a href="/"> Home</a>
         </ul>
     </div>
 
     <div class="right-nav"> 
         <ul class="ul-nav">
             <li class="nav-item">
-                <router-link to="">Log In</router-link>
+                <router-link to="/login">Log In</router-link>
             </li>
             <li class="nav-item">
                 <router-link to="/select-days">Comprar Tickets</router-link>
@@ -69,6 +69,7 @@ export default {
 .nav-item:hover {
     background-color: rgb(218, 205, 205); /* Color de fondo al pasar el ratón */
 }
+
 
 </style>
 

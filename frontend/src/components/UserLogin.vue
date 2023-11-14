@@ -4,8 +4,8 @@
             <h1>{{nameApp}}</h1>
             
             <form v-on:submit="comprobarUsuario">
-                <input type="text" v-model="usuarioIngresado.nombreUsuario" class="form-control">
-                <input type="password" v-model="usuarioIngresado.contrasenia" class="form-control">
+                <input type="text" v-model="usuarioIngresado.nombreUsuario" class="form-control" placeholder="nombre de usuario">
+                <input type="password" v-model="usuarioIngresado.contrasenia" class="form-control" placeholder="contraseña">
                 <input type="submit" value="Ingresar" class="btn btn-block btn-success">
             </form>
             <br>
@@ -86,5 +86,21 @@ export default {
 </script>
 
 <style>
+.container{
+    display:flex;
+    justify-content:center;
+}
 
+.container div form {
+    display:block;
+    width: 100%;
+    margin: 1vh 5vw;
+}
+
+    .container div form input {
+        display:flex;
+        width: 80%;
+        justify-content:center;
+        align-items:center;
+    }
 </style>
