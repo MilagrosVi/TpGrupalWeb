@@ -19,7 +19,7 @@
                             <img src="">
                         </div>
                     </div>
-                    <button type="submit" v-on:click="saveDays">Continuar</button>
+                    <button class="btn btn-block btn-info" type="submit" v-on:click="saveDays">Continuar</button>
                 </form>
             </div>
     </section>
@@ -91,6 +91,12 @@ h1{
 
 .div-form{
     padding-bottom: 3vw;
+}
+
+.boton{
+align:center;
+
+
 }
 
 .card{
