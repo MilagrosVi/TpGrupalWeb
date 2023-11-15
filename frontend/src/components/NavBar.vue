@@ -50,8 +50,33 @@ export default {
 
 }
 
+router-link{
+    text-decoration: none;
+}
 
+.ul-nav{
+    display: flex;
+    list-style: none;
+    font-family: Julius Sans One;
+    font-weight: 600;
+    font-size: 2.5vh;
+}
 
+.ul-nav{
+    text-decoration: none;
+    color: white;
 
+}
 
+.nav-item{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0,3s ease;
+}
+
+.nav-item:hover{
+    background-color: royalblue;
+
+}
 </style>
