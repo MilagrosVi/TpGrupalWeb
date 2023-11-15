@@ -6,7 +6,7 @@
             <form v-on:submit="comprobarUsuario">
                 <input type="text" v-model="usuarioIngresado.nombreUsuario" class="form-control" placeholder="nombre de usuario">
                 <input type="password" v-model="usuarioIngresado.contrasenia" class="form-control" placeholder="contraseña">
-                <input type="submit" value="Ingresar" class="btn btn-block btn-success">
+                <input type="submit" value="Ingresar" class="btn btn-block btn-info">
                 <router-link to="/otra-pagina">Registrate </router-link>
             </form>
             
@@ -106,6 +106,8 @@ export default {
     width: 100%;
     margin: 1vh 5vw;
 }
+
+
 
     .container div form input {
         display:flex;
