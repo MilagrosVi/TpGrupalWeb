@@ -7,7 +7,7 @@
     <div class="left-nav">
         <ul class="ul-nav">
             <li class="nav-item">
-                <router-link to="/">Home</router-link>
+                <router-link to="/">Inicio</router-link>
             </li>
         </ul>
     </div>
@@ -15,7 +15,7 @@
     <div class="right-nav"> 
         <ul class="ul-nav">
             <li class="nav-item">
-                <router-link to="/login">Log In</router-link>
+                <router-link to="/login">Iniciar sesión</router-link>
             </li>
             <li class="nav-item">
                 <router-link to="/select-days">Comprar Tickets</router-link>
@@ -79,4 +79,9 @@ router-link{
     background-color: royalblue;
 
 }
+
+    .nav-item a{
+        color:white;
+        text-decoration:none;
+    }
 </style>

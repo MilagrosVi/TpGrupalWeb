@@ -34,6 +34,7 @@
   <style>
   
   footer{
+    width:100vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -43,8 +44,10 @@
   }
   
   .footer-content{
+    width:100%;
       display: flex;
       flex-direction: row;
+      justify-content:center;
   }
   
   .social-media, .contact-info{
@@ -54,8 +57,20 @@
       padding: 5vw;
   }
   
-  .contact-info p{
+  .contact-info h2, .social-media h2{
+    display:flex;
+    font-size:1.5em;
+    font-family: Julius Sans One;
+    justify-content:center;
+    line-height:2em;
+  }
+
+  .contact-info p, .social-media a{
+      display:flex;
+      font-size:1.2em;
       margin: 0;
+      font-family: Julius Sans One;
+      justify-content:center;
   }
   
   .icon{

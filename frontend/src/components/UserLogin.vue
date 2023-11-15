@@ -19,7 +19,7 @@
 export default {
     data() {
                 return {
-                    nameApp: 'LOG IN ',
+                    nameApp: 'INICIAR SESIÓN',
 
                     usuarioIngresado: {
                         nombreUsuario:'',

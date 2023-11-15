@@ -6,6 +6,10 @@
       <p class="lugar">Hipódromo de San Isidro</p>
     </div>
   </section>
+
+  <section class="descrip_index">
+    <p>Rock Fest es un festival que te sumergirá en el vibrante mundo del rock durante dos días inolvidables. <br>Descubre la potencia de las guitarras, la energía del escenario y la pasión de las bandas más destacadas de la escena rockera. Desde legendarios íconos hasta las promesas emergentes, este festival te llevará en un viaje musical inigualable. Siente la conexión con la música y comparte momentos memorables con amantes del rock de todo el mundo.</p>
+  </section>
 </template>
 
 <script>
@@ -59,7 +63,8 @@ export default {
 
 .hero-div h1,
 .hero-div h2,
-.hero-div p {
+.hero-div p,
+.descrip_index p{
   font-family: Julius Sans One;
   color: white;
 }
@@ -74,5 +79,15 @@ export default {
 
 .lugar {
   font-size: 1.5em;
+}
+
+.descrip_index p{
+  display:flex;
+  margin: 12vh 8vw;
+  line-height:1.6em;
+  font-size:1.4em;
+  color:white;
+  text-align:center;
+  justify-content:center;
 }
 </style>
