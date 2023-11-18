@@ -73,7 +73,7 @@ def login():
     username = data["nombreUsuario"],
     password = data ["contrasenia"],
 
-    user = next((user for user in users if user["name"]== username and user["password"]== password), None)
+    user = next((user for user in usuarios if user["name"]== username and user["password"]== password), None)
     if user:
         return jsonify({"status": "success", "user": user}), 200
     else:

@@ -94,7 +94,7 @@ h1{
 }
 
 .boton{
-align:center;
+    align:center;
 
 
 }
