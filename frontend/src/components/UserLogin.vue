@@ -44,7 +44,7 @@ export default {
             },
             methods: { //creamos un objetos con funciones (métodos)
                 getUsuarios(){
-                    fetch('http://10.32.0.38:5000/usuarios',{
+                    fetch('http://localhost:5000/usuarios',{
                         method:"GET",
                         headers:{
                             'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ export default {
                         }
                     });
 
-                    if(flag==false)
+                    if(flag == false)
                         console.log('Acceso denegado');
                 },
             },

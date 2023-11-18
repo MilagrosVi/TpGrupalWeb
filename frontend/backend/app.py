@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from articles import articles #aca conectos los articulos con mi archivo app.py
-from users import users
+from usuarios import usuarios
 from fechasRecital import fechasRecital
 
 app = Flask(__name__)
@@ -70,8 +70,8 @@ def deleteProduct(article_name):
 def login():
     data = request.get_json();
 
-    username = data["name"],
-    password = data ["password"],
+    username = data["nombreUsuario"],
+    password = data ["contrasenia"],
 
     user = next((user for user in users if user["name"]== username and user["password"]== password), None)
     if user:
