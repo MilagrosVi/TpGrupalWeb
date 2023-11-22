@@ -29,7 +29,9 @@
                 <label> {{ day.Recital }} Dia {{ day.numeroDia }} </label>
             </div>
         </div>
-        <button type="submit">Comprar</button>
+        <div>
+            <button class="btn btn-block btn-info" type="submit">Comprar</button>
+        </div>
     </form>
 
 </template>
@@ -44,7 +46,10 @@ export default {
                 email: ""
             },
             days: [],
-            zones: [],
+            zones: [{'id':1, 'descripcion':'platea central', 'capacidadMaxima':250, 'capacidadActual':250,'adicional':2000},
+        {'id':2, 'descripcion':'Campo delantero', 'capacidadMaxima':300, 'capacidadActual':300,'adicional':1500},
+        {'id':3, 'descripcion':'Campo trasero', 'capacidadMaxima': 500, 'capacidadActual':300,'adicional':0},
+        {'id':4, 'descripcion':'Palco', 'capacidadMaxima': 500, 'capacidadActual':300,'adicional':3000}],
             selectedZone: "",
             selectedDays: [],
             numberOfTickers: 0,
@@ -115,5 +120,24 @@ export default {
 
 
 <style>
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3vw; 
+    margin-left: 10vw;
+    border-radius: 3%;
+}
+
+form div label{
+    font-family: Julius Sans One;
+    font-weight: 700;
+    font-size: 2.5vh;
+    margin: 1vw;
+}
+
+
+
 
 </style>
