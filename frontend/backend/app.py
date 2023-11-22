@@ -3,6 +3,7 @@ from flask_cors import CORS
 from articles import articles #aca conectos los articulos con mi archivo app.py
 from usuarios import usuarios
 from fechasRecital import fechasRecital
+from zonas import zonas
 
 app = Flask(__name__)
 CORS(app)
@@ -83,6 +84,10 @@ def login():
 @app.route('/available-days')
 def getAvailableDays():
     return jsonify(fechasRecital)
+
+@app.route('/zones')
+def getZones():
+    return jsonify(zonas)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
