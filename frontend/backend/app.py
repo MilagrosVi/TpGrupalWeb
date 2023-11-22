@@ -66,19 +66,24 @@ def deleteProduct(article_name):
             'article': articles
         })
 
-#agrego ruta Login
-@app.route('/api/login', methods=['POST'])
-def login():
-    data = request.get_json();
+# #agrego ruta Login
+# @app.route('/api/login', methods=['POST'])
+# def login():
+#     data = request.get_json();
 
-    username = data["nombreUsuario"],
-    password = data ["contrasenia"],
+#     username = data["nombreUsuario"],
+#     password = data ["contrasenia"],
 
-    user = next((user for user in usuarios if user["name"]== username and user["password"]== password), None)
-    if user:
-        return jsonify({"status": "success", "user": user}), 200
-    else:
-        return jsonify({"status": "error"}), 401
+#     user = next((user for user in usuarios if user["name"]== username and user["password"]== password), None)
+#     if user:
+#         return jsonify({"status": "success", "user": user}), 200
+#     else:
+#         return jsonify({"status": "error"}), 401
+
+@app.route('/login')
+def getUsuarios():
+    # return jsonify(products)
+    return jsonify({'usuarios': usuarios})
 
 # Get Data Routes
 @app.route('/available-days')
