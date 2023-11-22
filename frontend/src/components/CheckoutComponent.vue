@@ -9,7 +9,7 @@
   
     <form>
       <input type="number" v-model="quantity">
-      <button type="submit" v-on:click="buy" >Comprar</button>
+      <button type="submit" v-on:click="buy"> Comprar</button>
     </form>
     
   </template>

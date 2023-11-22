@@ -4,6 +4,7 @@ import CreatePage from './components/CreatePage'
 import UserLogin from './components/UserLogin'
 import SelectDaysComponent from './components/SelectDaysComponent'
 import CheckoutComponent from './components/CheckoutComponent'
+import FinalComponent from './components/FinalComponent'
 
 //Acá definimos las rutas
 const routes = [
@@ -31,7 +32,12 @@ const routes = [
         path: '/checkout', 
         name: 'checkout',
         component: CheckoutComponent  
-    }
+    },
+    {
+        path: '/final-component',
+        name:'finalComponent',
+        component: FinalComponent
+    },
 
 
 ]
