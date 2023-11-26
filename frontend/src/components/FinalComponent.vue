@@ -126,8 +126,7 @@ form{
     flex-direction: column;
     justify-content: center;
     margin: 3vw; 
-    margin-left: 10vw;
-    border-radius: 3%;
+    /* margin-left: 10vw; */
 }
 
 form div label{
@@ -135,9 +134,8 @@ form div label{
     font-weight: 700;
     font-size: 2.5vh;
     margin: 1vw;
+    margin-left:0;
 }
-
-
 
 
 </style>
