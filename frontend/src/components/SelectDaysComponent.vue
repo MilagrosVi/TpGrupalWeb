@@ -54,7 +54,8 @@ export default  {
         fetch("http://localhost:5000/available-days")
         .then(response =>response.json()).
         then(data => 
-        this.days=data)
+        this.days=data
+        )
     }
 }
 

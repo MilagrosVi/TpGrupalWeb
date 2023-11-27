@@ -4,6 +4,7 @@ from articles import articles #aca conectos los articulos con mi archivo app.py
 from usuarios import usuarios
 from fechasRecital import fechasRecital
 from zonas import zonas
+from entradas import entradas
 
 app = Flask(__name__)
 CORS(app)
@@ -93,6 +94,15 @@ def getAvailableDays():
 @app.route('/zones')
 def getZones():
     return jsonify(zonas)
+
+@app.route("/buy", methods=["POST"])
+def buy():
+    entrada = request.get_json();
+    print("entrada: ", entrada)
+    entradas.append(entrada)
+    print("entradas: ", entradas)
+
+    return jsonify({"message": "Compra exitosa"})
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
