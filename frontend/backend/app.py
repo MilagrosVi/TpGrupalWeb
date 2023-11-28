@@ -1,14 +1,25 @@
 from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from articles import articles #aca conectos los articulos con mi archivo app.py
 from usuarios import usuarios
 from fechasRecital import fechasRecital
 from zonas import zonas
 from entradas import entradas
 
-app = Flask(__name__)
-CORS(app)
+# app = Flask(__name__)
+# CORS(app, origins="http://localhost:8080")  # Configura los orígenes permitidos, permito todos
 
+app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}}) 
+
+# @app.route('/available-days', methods=['OPTIONS'])
+# def options_available_days():
+#     response = jsonify({'message': 'CORS preflight request handled'})
+#     response.headers.add('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+#     response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
+#     return response
+
+# Resto de la configuración y rutas de la aplicación...
 # Testing Route
 @app.route('/ping', methods=['GET'])
 def ping():
@@ -87,7 +98,7 @@ def getUsuarios():
     return jsonify({'usuarios': usuarios})
 
 # Get Data Routes
-@app.route('/available-days')
+@app.route('/select-days')
 def getAvailableDays():
     return jsonify(fechasRecital)
 
