@@ -28,20 +28,7 @@
 export default  {
     data (){
         return {
-            days: [
-    {'idDia': 1, 'Recital': 'Rock Fest', 'numeroDia': '1', 'fecha': '10/11/2023', 'precio':5000,
-            'bandas':[
-                {'idBanda':1,'nombreBanda': 'La vela Puerca', 'cantIntegrantes': '5',},
-                {'idBanda':2,'nombreBanda': 'El cuarteto de Nos', 'cantIntegrantes': '4',}
-                ]
-    },
-    {'idDia': 2, 'Recital': 'Rock Fest', 'numeroDia': '2', 'fecha': '11/11/2023', 'precio':5000,
-            'bandas':[
-                {'idBanda':1,'nombreBanda': 'La vela Puerca', 'cantIntegrantes': '5',},
-                {'idBanda':3,'nombreBanda': 'Los Piojos', 'cantIntegrantes': '5',}
-                ]
-    }
-],
+            days: [],
             selectedDays: []
         }
     },
@@ -62,13 +49,13 @@ export default  {
            this.$router.push("/checkout")
         }
     },
-    // mounted(){
-    //     fetch("http://localhost:5000/available-days")
-    //     .then(response =>response.json()).
-    //     then(data => 
-    //     this.days=data
-    //     )
-    // }
+    mounted(){
+        fetch("http://127.0.0.1:5000//available-days")
+        .then(response =>response.json()).
+        then(data => 
+        this.days=data
+        )
+    }
 }
 
 </script>

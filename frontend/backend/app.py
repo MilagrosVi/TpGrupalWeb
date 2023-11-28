@@ -6,8 +6,8 @@ from fechasRecital import fechasRecital
 from zonas import zonas
 from entradas import entradas
 
-# app = Flask(__name__)
-# CORS(app, origins="http://localhost:8080")  # Configura los orígenes permitidos, permito todos
+#app = Flask(__name__)
+#CORS(app, origins="http://localhost:8080")  # Configura los orígenes permitidos, permito todos
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}) 

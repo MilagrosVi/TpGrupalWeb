@@ -25,7 +25,10 @@ export default {
                         nombreUsuario:'',
                         contrasenia:''
                     },
-                    usuarios: []
+                    usuarios: [
+        {"id": 1, "nombreUsuario": "Juan", "contrasenia": "hola" },
+        {"id": 2, "nombreUsuario": "Maria", "contrasenia": "chau" },
+        {"id": 3, "nombreUsuario": "Pedro", "contrasenia": "hola" },]
                     /*usuarios: [
                         {
                             nombreUsuario: 'juan',
