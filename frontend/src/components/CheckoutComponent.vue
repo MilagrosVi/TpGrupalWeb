@@ -28,6 +28,7 @@
       methods:{
           buy(){
               localStorage.setItem("quantity", JSON.stringify(this.quantity))
+              this.$router.push("/final-component")
           }
       }   
   }

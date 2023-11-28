@@ -16,10 +16,9 @@
                             <div v-for="banda in day.bandas" :key="banda.idBanda">
                                 <h4>{{banda.nombreBanda}}</h4>
                             </div>
-                            <img src="">
                         </div>
                     </div>
-                    <button class="btn btn-block btn-info" type="submit" v-on:click="saveDays">Continuar</button>
+                    <button class="btn btn-block btn-info" type="submit" v-on:click="saveDays"> Continuar</button>
                 </form>
             </div>
     </section>
@@ -29,7 +28,20 @@
 export default  {
     data (){
         return {
-            days: [],
+            days: [
+    {'idDia': 1, 'Recital': 'Rock Fest', 'numeroDia': '1', 'fecha': '10/11/2023', 'precio':5000,
+            'bandas':[
+                {'idBanda':1,'nombreBanda': 'La vela Puerca', 'cantIntegrantes': '5',},
+                {'idBanda':2,'nombreBanda': 'El cuarteto de Nos', 'cantIntegrantes': '4',}
+                ]
+    },
+    {'idDia': 2, 'Recital': 'Rock Fest', 'numeroDia': '2', 'fecha': '11/11/2023', 'precio':5000,
+            'bandas':[
+                {'idBanda':1,'nombreBanda': 'La vela Puerca', 'cantIntegrantes': '5',},
+                {'idBanda':3,'nombreBanda': 'Los Piojos', 'cantIntegrantes': '5',}
+                ]
+    }
+],
             selectedDays: []
         }
     },
@@ -47,16 +59,16 @@ export default  {
             daysToSave.push(obj)
            })
            localStorage.setItem("purchase", JSON.stringify({dias: daysToSave}))
-           this.$router.push("/")
+           this.$router.push("/checkout")
         }
     },
-    mounted(){
-        fetch("http://localhost:5000/available-days")
-        .then(response =>response.json()).
-        then(data => 
-        this.days=data
-        )
-    }
+    // mounted(){
+    //     fetch("http://localhost:5000/available-days")
+    //     .then(response =>response.json()).
+    //     then(data => 
+    //     this.days=data
+    //     )
+    // }
 }
 
 </script>
